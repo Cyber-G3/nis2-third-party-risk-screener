@@ -1,0 +1,32 @@
+{
+  "profile": {
+    "schema_version": "0.1",
+    "supplier_id": "SUP-001",
+    "supplier_name": "Example Critical SaaS",
+    "supplier_type": "SAAS",
+    "service_description": "Critical cloud business application",
+    "service_criticality": "CRITICAL",
+    "data_sensitivity": "RESTRICTED",
+    "access_level": "PRIVILEGED",
+    "operational_dependency": "CRITICAL",
+    "internet_dependency": true,
+    "single_source": true,
+    "subcontractors_used": true,
+    "fourth_party_visibility": "UNKNOWN",
+    "geography": "THIRD_COUNTRY"
+  },
+  "controls": {
+    "mfa": "YES",
+    "privileged_access_management": "PARTIAL",
+    "incident_notification_commitment": "NO",
+    "vulnerability_management": "YES",
+    "security_testing": "PARTIAL",
+    "encryption": "YES",
+    "backup_recovery": "YES",
+    "business_continuity": "PARTIAL",
+    "supplier_monitoring": "NO",
+    "assurance_evidence": "PARTIAL",
+    "exit_portability": "NO",
+    "subcontractor_governance": "UNKNOWN"
+  }
+}
