@@ -1,0 +1,90 @@
+{
+  "mapping_version": "0.2",
+  "notice": "Supporting traceability only. These mappings do not determine legal applicability, compliance, certification status or contractual sufficiency.",
+  "sources": [
+    {
+      "id": "NIS2",
+      "name": "Directive (EU) 2022/2555 (NIS2)"
+    },
+    {
+      "id": "IR-2024-2690",
+      "name": "Commission Implementing Regulation (EU) 2024/2690"
+    },
+    {
+      "id": "ENISA-2025",
+      "name": "ENISA NIS2 Technical Implementation Guidance (2025)"
+    }
+  ],
+  "records": [
+    {
+      "topic": "supply_chain_security",
+      "source": "NIS2",
+      "reference": "Article 21(2)(d)",
+      "title": "Supply chain security",
+      "supports": ["supplier_risk_assessment", "supplier_tiering", "continuous_monitoring", "fourth_party_visibility", "concentration_risk"]
+    },
+    {
+      "topic": "incident_handling",
+      "source": "NIS2",
+      "reference": "Article 21(2)(b)",
+      "title": "Incident handling",
+      "supports": ["incident_notification_commitment", "incident_mode", "supplier_incident_review"]
+    },
+    {
+      "topic": "business_continuity",
+      "source": "NIS2",
+      "reference": "Article 21(2)(c)",
+      "title": "Business continuity, backup management and disaster recovery",
+      "supports": ["backup_recovery", "business_continuity", "exit_portability", "exit_readiness"]
+    },
+    {
+      "topic": "secure_acquisition_development_maintenance",
+      "source": "NIS2",
+      "reference": "Article 21(2)(e)",
+      "title": "Security in network and information systems acquisition, development and maintenance",
+      "supports": ["vulnerability_management", "security_testing", "software_supplier_assurance"]
+    },
+    {
+      "topic": "supply_chain_policy",
+      "source": "IR-2024-2690",
+      "reference": "5.1.1",
+      "title": "Supply chain security policy governing direct suppliers and service providers",
+      "supports": ["supplier_register", "supplier_intake", "supplier_risk_assessment"]
+    },
+    {
+      "topic": "supplier_selection_contracting",
+      "source": "IR-2024-2690",
+      "reference": "5.1.2",
+      "title": "Criteria to select and contract suppliers and service providers",
+      "supports": ["supplier_tiering", "contract_security_checker", "concentration_risk", "decision_engine", "exit_readiness"]
+    },
+    {
+      "topic": "supplier_selection_process",
+      "source": "IR-2024-2690",
+      "reference": "5.1.5",
+      "title": "Supply-chain criteria considered in supplier selection and procurement",
+      "supports": ["supplier_intake", "adaptive_due_diligence", "decision_engine"]
+    },
+    {
+      "topic": "supplier_monitoring",
+      "source": "IR-2024-2690",
+      "reference": "5.1.6",
+      "title": "Monitor, evaluate and act on supplier cybersecurity changes and significant incidents",
+      "supports": ["continuous_monitoring", "material_change", "incident_mode", "historical_reassessment"]
+    },
+    {
+      "topic": "supplier_review",
+      "source": "IR-2024-2690",
+      "reference": "5.1.7",
+      "title": "Regular monitoring, incident review, unscheduled reviews and change-risk analysis",
+      "supports": ["review_dates", "supplier_incident_review", "material_change", "before_after_risk"]
+    },
+    {
+      "topic": "technical_guidance_supply_chain",
+      "source": "ENISA-2025",
+      "reference": "Supply chain security domain",
+      "title": "Practical implementation guidance, examples of evidence and requirement mappings",
+      "supports": ["evidence_assurance", "control_evidence_mapping", "supplier_risk_assessment", "contract_security_checker", "continuous_monitoring"]
+    }
+  ]
+}
