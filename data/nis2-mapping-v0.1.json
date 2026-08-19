@@ -1,0 +1,41 @@
+{
+  "mapping_version": "0.1",
+  "notice": "Supporting references only. This dataset does not determine legal applicability, compliance or contractual sufficiency.",
+  "records": [
+    {
+      "topic": "supplier_selection_and_contracting",
+      "source": "Commission Implementing Regulation (EU) 2024/2690",
+      "reference": "5.1.1",
+      "title": "Supply chain security policy - supplier selection and contracting criteria",
+      "supports": ["supplier_intake", "supplier_tiering", "decision_engine"]
+    },
+    {
+      "topic": "supply_chain_security",
+      "source": "NIS2 Directive",
+      "reference": "Article 21(2)(d)",
+      "title": "Supply chain security",
+      "supports": ["supplier_risk_assessment", "continuous_monitoring", "fourth_party_visibility"]
+    },
+    {
+      "topic": "incident_handling",
+      "source": "NIS2 Directive",
+      "reference": "Article 21(2)(b)",
+      "title": "Incident handling",
+      "supports": ["incident_notification_commitment", "incident_mode"]
+    },
+    {
+      "topic": "business_continuity",
+      "source": "NIS2 Directive",
+      "reference": "Article 21(2)(c)",
+      "title": "Business continuity, backup management and disaster recovery",
+      "supports": ["backup_recovery", "business_continuity", "exit_portability"]
+    },
+    {
+      "topic": "secure_acquisition_development_maintenance",
+      "source": "NIS2 Directive",
+      "reference": "Article 21(2)(e)",
+      "title": "Security in network and information systems acquisition, development and maintenance",
+      "supports": ["vulnerability_management", "security_testing", "software_supplier_assurance"]
+    }
+  ]
+}
