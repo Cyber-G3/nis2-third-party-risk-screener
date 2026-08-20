@@ -28,6 +28,7 @@ Scope is frozen for the first stable Supplier Assurance Engine release. Do not a
 ## Security / governance
 
 - [x] `SECURITY.md` present
+- [x] Apache-2.0 `LICENSE` file present
 - [x] No runtime LLM dependency for core scoring
 - [x] Deterministic reason codes documented
 - [x] Public repository data-handling warning documented
@@ -35,12 +36,11 @@ Scope is frozen for the first stable Supplier Assurance Engine release. Do not a
 
 ## Documentation / packaging
 
-- [x] README present
+- [x] README present and marked `v0.1.0 Release Candidate`
 - [x] Supplier Assurance documentation present
 - [x] JSON Schema published
 - [x] `CHANGELOG.md` present
 - [x] Package version set to `0.1.0`
-- [ ] LICENSE file present
 - [ ] Build wheel and sdist successfully from release commit
 
 ## Release
