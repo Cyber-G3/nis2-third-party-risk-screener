@@ -24,7 +24,9 @@ Scope is frozen for the first stable Supplier Assurance Engine release. Do not a
 - [x] Bandit configured
 - [x] pip-audit configured
 - [x] Wheel + sdist build verification configured in CI
-- [ ] Final CI green on release commit
+- [x] Release-candidate CI green
+- [x] Wheel + sdist build succeeds on release-candidate head
+- [ ] Re-run CI after merge to `main`
 
 ## Security / governance
 
@@ -42,7 +44,7 @@ Scope is frozen for the first stable Supplier Assurance Engine release. Do not a
 - [x] JSON Schema published
 - [x] `CHANGELOG.md` present
 - [x] Package version set to `0.1.0`
-- [ ] Build wheel and sdist successfully from release commit
+- [x] Build wheel and sdist successfully on release-candidate head
 
 ## Release
 
