@@ -23,6 +23,7 @@ Scope is frozen for the first stable Supplier Assurance Engine release. Do not a
 - [x] Minimum 80% coverage gate configured
 - [x] Bandit configured
 - [x] pip-audit configured
+- [x] Wheel + sdist build verification configured in CI
 - [ ] Final CI green on release commit
 
 ## Security / governance
