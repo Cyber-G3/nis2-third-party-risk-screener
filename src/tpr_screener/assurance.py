@@ -7,6 +7,8 @@ from pydantic import BaseModel, Field
 
 from tpr_screener.models import Level, SupplierProfile
 
+SUPPLIER_ASSURANCE_SCHEMA_VERSION = "1.0"
+
 
 class EvidenceState(StrEnum):
     CURRENT = "CURRENT"
@@ -50,12 +52,15 @@ class SupplierEvidenceStatus(BaseModel):
 
 
 class SupplierAssuranceResult(BaseModel):
+    schema_version: str = SUPPLIER_ASSURANCE_SCHEMA_VERSION
     supplier_id: str
     assurance_level: Level
     evidence_status: list[SupplierEvidenceStatus] = Field(default_factory=list)
     triggers: list[ReassessmentTrigger] = Field(default_factory=list)
     reason_codes: list[str] = Field(default_factory=list)
     reassessment_required: bool
+    remediation_required: bool
+    closure_evidence_required: bool
 
 
 def _evidence_state(record: SupplierEvidenceRecord, as_of: date) -> SupplierEvidenceStatus:
@@ -123,6 +128,14 @@ def assess_supplier_assurance(data: SupplierAssuranceInput) -> SupplierAssurance
     else:
         assurance_level = Level.LOW
 
+    remediation_triggers = {
+        ReassessmentTrigger.EVIDENCE_EXPIRED,
+        ReassessmentTrigger.SUPPLIER_INCIDENT,
+        ReassessmentTrigger.MATERIAL_CHANGE,
+        ReassessmentTrigger.SINGLE_SOURCE,
+    }
+    remediation_required = any(trigger in remediation_triggers for trigger in triggers)
+
     return SupplierAssuranceResult(
         supplier_id=data.supplier.supplier_id,
         assurance_level=assurance_level,
@@ -130,4 +143,6 @@ def assess_supplier_assurance(data: SupplierAssuranceInput) -> SupplierAssurance
         triggers=triggers,
         reason_codes=reason_codes,
         reassessment_required=bool(triggers),
+        remediation_required=remediation_required,
+        closure_evidence_required=remediation_required,
     )
