@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Cyber-G3/nis2-third-party-risk-screener/schemas/supplier-assurance-v1.schema.json",
+  "title": "NIS2 Supplier Assurance Result v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "supplier_id",
+    "assurance_level",
+    "evidence_status",
+    "triggers",
+    "reason_codes",
+    "reassessment_required",
+    "remediation_required",
+    "closure_evidence_required"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "supplier_id": {"type": "string", "minLength": 1},
+    "assurance_level": {"type": "string", "enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"]},
+    "evidence_status": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["evidence_id", "title", "state", "days_until_expiry"],
+        "properties": {
+          "evidence_id": {"type": "string", "minLength": 1},
+          "title": {"type": "string", "minLength": 1},
+          "state": {"type": "string", "enum": ["CURRENT", "EXPIRING", "EXPIRED", "MISSING", "UNKNOWN"]},
+          "days_until_expiry": {"type": ["integer", "null"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "triggers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["SCHEDULED", "EVIDENCE_EXPIRED", "CRITICAL_SERVICE", "SUPPLIER_INCIDENT", "MATERIAL_CHANGE", "SINGLE_SOURCE"]
+      },
+      "uniqueItems": true
+    },
+    "reason_codes": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "reassessment_required": {"type": "boolean"},
+    "remediation_required": {"type": "boolean"},
+    "closure_evidence_required": {"type": "boolean"}
+  },
+  "additionalProperties": false
+}
