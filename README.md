@@ -1,6 +1,6 @@
 # NIS2 Third-Party Risk Screener
 
-Open-source, deterministic third-party cyber risk screening and assurance toolkit for supplier intake, inherent/residual risk, decision support, evidence expectations and NIS2-oriented supply-chain traceability.
+Open-source, deterministic third-party cyber risk screening and assurance toolkit for supplier intake, inherent/residual risk, decision support, evidence expectations and NIS2-oriented supply-chain traceability. Link https://cyber-g3.github.io/nis2-third-party-risk-screener/
 
 > Status: **v0.1.0 Release Candidate**
 
