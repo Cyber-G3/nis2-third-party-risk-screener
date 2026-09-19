@@ -116,6 +116,10 @@ These platform capabilities are intentionally out of scope for the standalone en
 
 Do not commit real supplier-confidential evidence, credentials, personal data, contracts or customer-specific assurance records to this public repository. See `SECURITY.md`.
 
+## Portfolio case
+
+For the engineering and business case behind this project, see [docs/PORTFOLIO.md](docs/PORTFOLIO.md).
+
 ## License
 
 Apache-2.0. See `LICENSE`.
