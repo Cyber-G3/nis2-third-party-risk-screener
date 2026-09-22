@@ -112,6 +112,14 @@ These platform capabilities are intentionally out of scope for the standalone en
 - no telemetry
 - no LLM dependency required at runtime
 
+## Professional workspace
+
+The free screener supports initial vendor triage. For the complete operational workflow—supplier register, service criticality, questionnaires, evidence requests and review, inherent and residual risk, decisions, conditions, remediation and reassessment—use the **[Vendor Security Review & Decision Workspace](https://app.notion.com/p/3bcd0390772481d69b3fd070dc6cb3df)**.
+
+- **Individual Edition:** €149
+- **Professional Edition:** €249
+- Professional implementation and vendor-review support: [SpectraSec](https://www.spectrasec.eu/)
+
 ## Security
 
 Do not commit real supplier-confidential evidence, credentials, personal data, contracts or customer-specific assurance records to this public repository. See `SECURITY.md`.
